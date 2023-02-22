@@ -15,9 +15,9 @@ import time
 import datetime
 import pymongo
 
-USER = "NABADMIN"
-PASSWORD = "admin"
-CLUSTER_URL = "nab-demo-aws.g3aer.mongodb.net"
+USER = "TBD"
+PASSWORD = "TBD"
+CLUSTER_URL = "TBD.mongodb.net"
 DB_NAME = 'sample_analytics'
 TTL_INDEX_NAME = 'date_created_ttl_index'
 
