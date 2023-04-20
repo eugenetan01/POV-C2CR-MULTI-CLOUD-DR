@@ -1,0 +1,10 @@
+{
+    "account_id": {"$numberInt": {"min": 100000, "max": 999999}},
+    "date_modified": "$now",
+    "date_created": "$now",
+    "amount": {"$numberInt": {"min": 100, "max": 900}},
+    "transaction_code": "buy",
+    "symbol": "goog",
+    "price": "876.12345",
+    "status": "open"
+}

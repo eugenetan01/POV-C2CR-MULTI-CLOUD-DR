@@ -1,0 +1,52 @@
+{
+  "_id": {
+    "$oid": "123456567890000"
+  },
+  "customer_reference_id": "abcd",
+  "country": "US",
+  "state": "WA",
+  "city": "Bothell",
+  "zip_code": "98011",
+  "product_title": "new product",
+  "product_code": "abcd1234",
+  "customer_billed_amount": 1111,
+  "aws_fee": -178.36,
+  "refunds_amount": 0,
+  "aws_fee_refund": 0,
+  "cost": 0,
+  "billed_amount": 1111,
+  "currency": "USD",
+  "transaction_reference_id": "xyz1234",
+  "us_sales_tax_customer_billed_amount": 0,
+  "us_sales_tax_refunds_amount": 0,
+  "offer_id": "704rjqobayeuagehcc7l5lj3c",
+  "offer_visibility": "Public",
+  "opportunity_name": "",
+  "opportunity_description": "",
+  "solution_title": "",
+  "solution_id": "",
+  "payer_reference_id": "abcdefgh",
+  "payer_address_id": "abcdefgh",
+  "labra_product_id": "93dfb506-e297-4036-9069-abcdefgh",
+  "labra_buyer_id": null,
+  "labra_subscription_id": null,
+  "labra_buyer_logo_url": null,
+  "labra_buyer_name": null,
+  "aws_account_id": null,
+  "labra_partner_id": "1eb44052-6880-4d7e-9e5a-xyzabcd",
+  "requested_for_datetime": {
+    "$date": {
+      "$numberLong": "1657843200000"
+    }
+  },
+  "requested_at_datetime": {
+    "$date": {
+      "$numberLong": "1676311647000"
+    }
+  },
+  "processed_at_datetime": {
+    "$date": {
+      "$numberLong": "1676311651000"
+    }
+  }
+}

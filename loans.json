@@ -1,0 +1,11 @@
+{
+    "year": "$year",
+    "issue_d":  {"$date": {"min": "2015-01-01", "max": "2016-12-12", "string": true, "american": false}},
+    "final_d": {"$date": {"min": "2022-01-01", "max": "2025-12-12", "string": true, "american": false}},
+    "emp_length": {"$numberInt": {"min": 1, "max": 10}},
+    "home_ownership": {"$choose": {"from": ["RENT", "MORTGAGE"]}},
+    "annual_inc": {"$numberInt": {"min": 20000, "max": 300000}},
+    "delinquent_days": {"$choose": {"from": [{"$numberInt": {"min": 1, "max": 90}}, 0]}},
+    "loan_amt": {"$numberInt": {"min": 10000, "max": 100000}},
+    "notes": "$paragraph"
+}

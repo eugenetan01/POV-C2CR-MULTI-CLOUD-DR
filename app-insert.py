@@ -15,10 +15,10 @@ import time
 import datetime
 import pymongo
 
-USER = "TBD"
-PASSWORD = "TBD"
-CLUSTER_URL = "TBD.mongodb.net"
-DB_NAME = 'sample_analytics'
+USER = "sa"
+PASSWORD = "admin"
+CLUSTER_URL = "ambankdemoonprem.g3aer.mongodb.net"
+DB_NAME = 'AMBANK'
 TTL_INDEX_NAME = 'date_created_ttl_index'
 
 ####
@@ -49,6 +49,12 @@ def peform_inserts():
             count += 1
             account_id = randint(100000, 999999)
             timestamp = datetime.datetime.utcnow()
+            price = randint(800, 900)
+            amt = randint(100, 900)
+            status = "open"
+
+            if count % 2 == 0:
+                status = "open"
 
             res_account = db.accounts.insert_one({
                 'account_id': account_id,
@@ -60,21 +66,15 @@ def peform_inserts():
             })
 
             res_transactions = db.transactions.insert_one({
-                'account_id': randint(100000, 999999),
+                'account_id': account_id,
+                'date_modified': timestamp,
                 'date_created': timestamp,
-                'bucket_start_date': timestamp,
-                'bucket_end_date': datetime.datetime.utcnow(),
-                'transactions': [
-                    {
-                        'date': timestamp,
-                        'amount': 1,
-                        'transaction_code': "buy",
-                        'symbol': "goog",
-                        'price': "876.12345",
-                        'total': "876.12345"
-
-                    }
-                ]
+                'amount': amt,
+                'transaction_code': "buy",
+                'symbol': "goog",
+                'price': price,
+                'total': price * amt,
+                'status': status
             })
 
             print("Inserted Account:" + str(res_account.inserted_id))
